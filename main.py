@@ -13,5 +13,5 @@ camera_capture.release()
 # Capture audio sample
 print("Start recording audio")
 sample_name = "aaaa.wav"
-os.system(f'arecord -vv --format=cd --device="{os.environ['AUDIO_INPUT_DEVICE']}" --duration=10 {sample_name}')
+os.system(f'arecord -vv --format=cd --device={os.environ["AUDIO_INPUT_DEVICE"]} --duration=10 {sample_name}')
 os.system(f"ffplay -nodisp -autoexit -loglevel quiet {sample_name}")
