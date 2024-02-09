@@ -1,4 +1,13 @@
-FROM python:3.8
+FROM --platform=${BUILDPLATFORM:-linux/amd64} python:3.8
+
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
+ARG TARGETOS
+ARG TARGETARCH
+
+ARG Version
+ARG GitCommit
+
 
 RUN apt-get update && apt-get install -y ffmpeg alsa-utils
 
