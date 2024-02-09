@@ -7,6 +7,7 @@ ARG TARGETARCH
 
 ARG Version
 ARG GitCommit
+RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM" 
 
 
 RUN apt-get update && apt-get install -y ffmpeg alsa-utils
