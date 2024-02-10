@@ -1,4 +1,4 @@
-FROM --platform=${BUILDPLATFORM:-linux/amd64} python:3.8 as build
+FROM arm64v8/python:3.8 as build
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
