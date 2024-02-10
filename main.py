@@ -2,7 +2,7 @@ import os
 import time
 from spot_controller import SpotController
 
-ROBOT_IP = "192.168.6.9"#os.environ['ROBOT_IP']
+ROBOT_IP = "192.168.50.3"#os.environ['ROBOT_IP']
 SPOT_USERNAME = "admin"#os.environ['SPOT_USERNAME']
 SPOT_PASSWORD = "2zqa8dgw7lor"#os.environ['SPOT_PASSWORD']
 
