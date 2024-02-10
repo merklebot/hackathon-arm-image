@@ -11,7 +11,7 @@ def main():
     #example of using micro and speackers
     print("Start recording audio")
     sample_name = "aaaa.wav"
-    cmd = f'arecord -vv --format=cd --device={os.environ["AUDIO_INPUT_DEVICE"]} --duration=10 -c 1 {sample_name}'
+    cmd = f'arecord -vv --format=cd --device={os.environ["AUDIO_INPUT_DEVICE"]} -r 48000 --duration=10 -c 1 {sample_name}'
     print(cmd)
     os.system(cmd)
     print("Playing sound")
