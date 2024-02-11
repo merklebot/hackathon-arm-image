@@ -181,6 +181,7 @@ class SpotController:
         :param duration: The duration for which the robot should continue moving left, in seconds.
         """
         # Assuming positive v_y moves the robot to the left. Adjust speed and duration as needed.
+        self.stand_at_height(0)
         self.move_by_velocity_control(v_x=0.0, v_y=speed, v_rot=0.0, cmd_duration=duration)
     def move_right(self, speed=0.1, duration=0.5):
         """
@@ -190,4 +191,6 @@ class SpotController:
         :param duration: The duration for which the robot should continue moving left, in seconds.
         """
         # Assuming positive v_y moves the robot to the left. Adjust speed and duration as needed.
+        self.stand_at_height(0)
+
         return self.move_left(speed=-speed,duration=duration)
