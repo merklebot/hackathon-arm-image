@@ -62,22 +62,24 @@ def main():
             spot_controller = SpotController(username='your_username', password='your_password', robot_ip='spot_robot_ip')
             current_time = time.time()
 
-            for timestamp, command in sorted_timestamps_commands:
+           # for timestamp, command in sorted_timestamps_commands:
     # Calculate how long to wait before executing the command
-                wait_time = timestamp - current_time
+            #    wait_time = timestamp - current_time
     
     # If the wait time is positive, sleep until the timestamp
-                if wait_time > 0:
-                    print(f"Waiting {wait_time} seconds to execute command.")
-                    time.sleep(wait_time)
+             #   if wait_time > 0:
+              
+              #      print(f"Waiting {wait_time} seconds to execute command.")
+               
+               #     time.sleep(wait_time)
                 
                 # Execute the command. This example simply evaluates a string as Python code.
                 # If your commands are function names, you might instead call the function directly.
-                exec(command)
+          #      exec(command)
                 
                 # Update the current time to the timestamp after executing the command
-                # If commands are sequential without real-time constraint, remove this line
-                current_time = timestamp
+           #     # If commands are sequential without real-time constraint, remove this line
+            #    current_time = timestamp
 
             # Define the parameters for walking in a circle
             circle_radius = 1.0  # radius of the circle in meters
