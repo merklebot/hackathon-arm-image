@@ -29,7 +29,7 @@ def main():
     import whisper
 
 # Define the path to your audio file
-    audio_file_path = 'path/to/your/audio/file.mp3'
+    audio_file_path = 'cha.mp4'
 
     # Initialize the Whisper model
     model = whisper.load_model("base")  # You can choose a different model size as needed
@@ -82,7 +82,7 @@ def main():
             # Define the parameters for walking in a circle
             circle_radius = 1.0  # radius of the circle in meters
             angular_velocity = 0.2  # angular velocity in rad/s
-
+            
             # Calculate the linear velocity needed to maintain a constant angular velocity
             linear_velocity = angular_velocity * circle_radius
 
@@ -91,7 +91,7 @@ def main():
 
             # Start walking in a circle
             spot_controller.move_by_velocity_control(v_x=linear_velocity, v_rot=angular_velocity, cmd_duration=circle_duration)
-
+            spot_controller.bow(pitch=2)
 
 
 
